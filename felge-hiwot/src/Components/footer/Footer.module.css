@@ -39,9 +39,12 @@
     justify-content: space-around;
     align-items: center;
 }
+.class_links {
+    font-size: 18px;
+}
 .class_links ul {
     list-style: none;
-    margin-top: 12px;
+    /* margin-top: 12px; */
     line-height: 28px;
 }
 .class_links a {
