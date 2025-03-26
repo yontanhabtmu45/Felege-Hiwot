@@ -12,7 +12,9 @@ function Footer() {
       <div className={classes.footer_wrapper}>
         <div className={classes.inner_footer}>
           <div className={classes.footer_logo}>
-            <img src={logo} />
+            <a href="/">
+              <img src={logo} />
+            </a>
             <ul>
               <li>
                 <a href="">
@@ -37,7 +39,7 @@ function Footer() {
             </ul>
           </div>
           <div className={classes.class_wrapper}>
-            <h2>ክፍሎች</h2>
+            <h2>ማውጫ</h2>
             <div className={classes.class_links}>
               <ul>
                 <li>
@@ -104,26 +106,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
-
-
-{/* <div className={classes.class_wrapper}>
-  <h2>ማህበራዊ ድህረ-ገፆች</h2>
-  <div className={classes.class_links}>
-    <ul>
-      <li>
-        <a href="#">ቴሌግራም</a>
-      </li>
-      <li>
-        <a href="#">ዩቲዩብ</a>
-      </li>
-      <li>
-        <a href="#">ኢንስታግራም</a>
-      </li>
-      <li>
-        <a href="#">ቲክቶክ</a>
-      </li>
-    </ul>
-  </div>
-</div> */}

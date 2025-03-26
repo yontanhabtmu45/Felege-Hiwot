@@ -8,6 +8,12 @@ function Main() {
   return (
     <div className={classes.main_highlight}>
       <div className={classes.carsoul_effect}>
+      {/* <div className={classes.quote}>
+          <p>
+          እንኳን በደኅና መጡ !
+          </p>
+
+      </div> */}
         <Carousel
           autoPlay={true}
           infiniteLoop={true}
@@ -17,9 +23,6 @@ function Main() {
           {img.map((imgItem) => {
             return <img src={imgItem} />;
           })}
-            <p>
-            እንኳን በደኅና መጡ !
-            </p>
         </Carousel>
       </div>
     </div>

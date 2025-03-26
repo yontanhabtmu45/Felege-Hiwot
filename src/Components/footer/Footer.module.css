@@ -1,5 +1,5 @@
 .footer_wrapper {
-    height: 260px;
+    max-height: 260px;
     background-image: url('../../assets/Img/cloud-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -9,10 +9,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 24px 16px;
+    padding: 24px 96px;
 }
 .footer_logo {
     margin-left: -120px;
+    text-align: center;
 }
 .footer_logo img {
     width: 98px;
@@ -31,20 +32,12 @@
 .footer_logo ul a:hover {
     color: rgb(32, 32, 230);
 }
-
-.class_wrapper h2 {
-    text-align: center;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 .class_links {
     font-size: 18px;
 }
 .class_links ul {
     list-style: none;
-    /* margin-top: 12px; */
+    margin-top: 12px;
     line-height: 28px;
 }
 .class_links a {
@@ -57,15 +50,33 @@
 .class_wrapper {
     display: block;
 }
+
 .class_wrapper h2 {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: -18px;
     text-decoration: underline;
-    padding-bottom: 20px;
+    padding-bottom: 14px;
 }
 .breakers {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 200px;
-    margin-right: 28px;
+    gap: 100px;
+}
+@media screen and (max-width: 768px) {
+    .footer_logo ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        margin: 0 200px;
+    }
+    .class_wrapper {
+        display: none;
+    }
 }

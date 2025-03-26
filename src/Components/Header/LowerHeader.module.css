@@ -1,0 +1,12 @@
+.welcome_page{
+    background: rgba(68, 132, 228, 0.837);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    margin: -2px;
+}
+.welcome_page bold, sup {
+    font-size: 24px;
+    color: gold;
+}
