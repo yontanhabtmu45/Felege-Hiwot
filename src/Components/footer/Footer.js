@@ -4,7 +4,7 @@ import logo from "../../assets/Img/LOGO/FH-LOGO.png";
 import { FaTelegram } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa6"
 import { Link } from "react-router-dom";
 
 function Footer() {
