@@ -14,8 +14,13 @@
   justify-content: space-between;
   align-items: center;
 }
+.nav-link a:hover {
+  /* background: rgb(102, 51, 153); */
+  /* color: #fff; */
+  border-bottom: 3px solid #111;
+}
 .logo a img {
-  max-width: 65px;
+  width: 50px;
   margin-left: 10px;
 }
 .logo a {
@@ -36,15 +41,21 @@
   gap: 30px;
   margin-right: 20px;
   padding-top: 22px;
+  height: 9vh;
 }
 .nav-list .nav-link a {
   text-decoration: none;
   color: #111;
   margin-right: 8px;
 }
-.nav-list .nav-link a:hover {
-  padding-bottom: 3px;
-  border-bottom: 3px solid #111;
+.nav-link select {
+  border: none;
+  border-radius: 2px;
+  padding: 3px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
 }
 .wrapper_list svg {
   display: none;
@@ -80,7 +91,16 @@
     z-index: 10;
   }
   .nav-link.active {
-    top: 63px;
+    height: 54vh;
+    background-image: url("../../assets/Img/cloud.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    padding: 8px 45px;
+    top: 58px;
+  }
+  .dropdown li {
+    display: none;
   }
   .logo a img {
     max-width: 65px;

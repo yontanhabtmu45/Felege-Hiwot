@@ -1,0 +1,82 @@
+.contact_wrapper {
+  text-align: center;
+  margin: 89px 10px 10px;
+}
+.contact_lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 16px; */
+}
+.text_lists {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.text_lists label {
+  margin-left: 8px;
+  font-size: 18px;
+}
+.text_lists input,
+textarea {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background: #84aade67;
+}
+.text_lists input {
+  width: 18rem;
+  height: 42px;
+  margin: 14px 0;
+  padding-left: 14px;
+  font-size: 16px;
+}
+.text_lists textarea {
+  width: 18rem;
+  height: 12rem;
+  margin-top: 12px;
+  padding: 18px 21px;
+  font-size: 16px;
+}
+.text_lists button {
+  width: 18rem;
+  height: 40px;
+  margin: 10px 0;
+  border: none;
+  background: #044e8098;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.text_lists button:hover {
+  opacity: 0.8;
+}
+.text_lists button:active {
+  opacity: 1;
+}
+@media screen and (max-width: 1150px) {
+  .contact_lists {
+    display: block;
+  }
+  .header{
+    margin: 0 0 16px;
+    text-decoration: underline;
+  }
+  .text_lists {
+    place-items: center;
+  }
+  .text_lists input,
+  textarea {
+    width: 48vw;
+  }
+  .text_lists textarea {
+    width: 48vw;
+}
+.text_lists button {
+    margin: 16px;
+    width: 48vw;
+}
+.location iframe {
+    width: 94vw;
+  }
+}

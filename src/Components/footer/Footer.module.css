@@ -1,9 +1,12 @@
 .footer_wrapper {
     max-height: 260px;
+    width: 100vw;
     background-image: url('../../assets/Img/cloud-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    z-index: 10;
 }
 .inner_footer {
     display: flex;

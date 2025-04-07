@@ -1,0 +1,24 @@
+.four04 {
+    text-align: center;
+    margin: 198px 0 89px;
+}
+.four04 h1 {
+    margin: 21px;
+}
+.four04 button {
+    background: #3090FC;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    margin: 24px 16px 0;
+    transition: 0.3s all ease-out;
+    cursor: pointer;
+
+}
+.four04 button:hover{
+    opacity: .8;
+}
+.four04 button:active {
+    opacity: 1;
+}

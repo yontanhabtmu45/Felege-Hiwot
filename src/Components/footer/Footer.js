@@ -5,6 +5,7 @@ import { FaTelegram } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -12,29 +13,29 @@ function Footer() {
       <div className={classes.footer_wrapper}>
         <div className={classes.inner_footer}>
           <div className={classes.footer_logo}>
-            <a href="/">
+            <Link to="/">
               <img src={logo} />
-            </a>
+            </Link>
             <ul>
               <li>
-                <a href="">
+                <Link to="">
                   <FaTelegram />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="">
+                <Link to="">
                   <FaInstagram />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="">
+                <Link to="">
                   <FaYoutube />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="">
+                <Link to="">
                   <FaTiktok />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -43,19 +44,19 @@ function Footer() {
             <div className={classes.class_links}>
               <ul>
                 <li>
-                  <a href="#">ዋና ገጽ</a>
+                  <Link to="/">ዋና ገጽ</Link>
                 </li>
                 <li>
-                  <a href="#">ስለ ሰ/ት/ቤቱ</a>
+                  <Link to="/about">ስለ ሰ/ት/ቤቱ</Link>
                 </li>
                 <li>
-                  <a href="#">አገልግሎቶች</a>
+                  <Link to="/services">አገልግሎቶች</Link>
                 </li>
                 <li>
-                  <a href="#">ታሪካችን</a>
+                  <Link to="/history">ታሪካችን</Link>
                 </li>
                 <li>
-                  <a href="#">ያግኙን</a>
+                  <Link to="/contact">ያግኙን</Link>
                 </li>
               </ul>
             </div>
@@ -67,32 +68,32 @@ function Footer() {
                 <div className={classes.breaker_1}>
                   <ul>
                     <li>
-                      <a href="#">ጽሕፈት ቤት</a>
+                      <Link to="/services/HQ">ጽሕፈት ቤት</Link>
                     </li>
                     <li>
-                      <a href="#">ሕጻናት እና ታዳጊ</a>
+                      <Link to="/services/kids">ሕጻናት እና ታዳጊ</Link>
                     </li>
                     <li>
-                      <a href="#">ትምህርት ክፍል</a>
+                      <Link to="/services/education">ትምህርት ክፍል</Link>
                     </li>
                     <li>
-                      <a href="#">ጸሎት እና መዝሙር ክፍል</a>
+                      <Link to="/services/prayer">ጸሎት እና መዝሙር ክፍል</Link>
                     </li>
                   </ul>
                 </div>
                 <div className={classes.breaker_2}>
                   <ul>
                     <li>
-                      <a href="#">ኪነ-ጥበብ ክፍል</a>
+                      <Link to="/services/theater">ኪነ-ጥበብ ክፍል</Link>
                     </li>
                     <li>
-                      <a href="#">ግንኙነት ክፍል</a>
+                      <Link to="/services/social">ግንኙነት ክፍል</Link>
                     </li>
                     <li>
-                      <a href="#">ልማት ክፍል</a>
+                      <Link to="/services/Lemat">ልማት ክፍል</Link>
                     </li>
                     <li>
-                      <a href="#">ንብረት ክፍል</a>
+                      <Link to="/services/property">ንብረት ክፍል</Link>
                     </li>
                   </ul>
                 </div>

@@ -1,0 +1,15 @@
+.carsoul_effect img {
+    position: relative;
+    height: 90vh;
+}
+.carsoul_effect > p {
+    margin-bottom: 42px;
+} 
+.quote p{
+    height: auto;
+    background: #413e3e66;
+    border-radius: 14px;
+    padding: 24px;
+    /* z-index: -92px; */
+    margin-top: 42px;
+}

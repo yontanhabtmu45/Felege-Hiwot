@@ -1,15 +1,9 @@
 import './App.css';
-import Footer from './Components/footer/Footer';
-import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
+import Routing from './Router';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+      <Routing/>
   );
 }
 

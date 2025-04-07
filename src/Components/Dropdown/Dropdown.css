@@ -1,0 +1,31 @@
+.services-submenu {
+    top: 58px;
+    position: absolute;
+    list-style: none;
+}
+.services-submenu.clicked{
+    display: none;
+}
+.services-submenu ul li {
+    color: #ffffff;
+}
+.submenu-item {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background: rgba(55, 125, 231, 0.837);
+    padding: 16px;
+}
+.submenu-item:hover {
+    background: rgba(43, 81, 138, 0.87);
+    color: #ffffff;
+    border: none;
+}
+@media screen and (max-width: 1150px) {
+    .services-submenu {
+        display: grid;
+        grid-template-columns: repeat(2,  1fr);
+        right: 102px;
+        top: -145px;
+    }
+}
