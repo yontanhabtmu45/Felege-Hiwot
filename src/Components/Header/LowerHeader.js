@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import classes from './LowerHeader.module.css'
 
 const LowerHeader = () => {
-
-  const [count, setCount] =  useState((25));
+    const [count, setCount] =  useState((25));
 
   // useEffect(() => {
   //   let interval = setInterval(() => {
@@ -12,9 +11,6 @@ const LowerHeader = () => {
 
   //   return () => clearInterval(interval)
   // }, [])
-
-
-
 
   return (
     <div className={classes.lower_header}>
