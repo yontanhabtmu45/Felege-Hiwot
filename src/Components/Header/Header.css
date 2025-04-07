@@ -15,8 +15,6 @@
   align-items: center;
 }
 .nav-link a:hover {
-  /* background: rgb(102, 51, 153); */
-  /* color: #fff; */
   border-bottom: 3px solid #111;
 }
 .logo a img {
