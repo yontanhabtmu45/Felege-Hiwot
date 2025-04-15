@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./DailyPosts.module.css";
 import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import DZ from "../../assets/FH/images/10001.jpg";
+import axios from "../../api/axiosConfig";
+import Youtube from "../../YouTube/YT";
 
 function DailyPosts() {
+  const [latestPosts, setLatestPosts] = useState([]);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        // const token = localStorage.getItem("token");
+        const response = await axios.get("/posts/get-posts");
+        setLatestPosts(response.data);
+      } catch (error) {
+        console.error("Error fetching posts:", error.message);
+      }
+    }
+
+    fetchPosts();
+  }, []);
+
   return (
     <>
       <section className={classes.mission_wrapper}>
@@ -20,8 +37,8 @@ function DailyPosts() {
             <h3>ተልዕኮ</h3>
             <p>
               "ሂዱና አሕዛብን ሁሉ በአብ በወልድና በመንፈስ ቅዱስ ስም እያጠመቃችኋቸው ያዘዛኋችሁንም ሁሉ
-              እያስተማራችኋቸው ደቀ መዛሙርት አድርጓቸው" ባለው አምላካዊ ቃል መሰረት ወንጌልን አመቺ በሆነ መንገድ ሁሉ
-              ለመላው ዓለም መስበክ፡፡
+              እያስተማራችኋቸው ደቀ መዛሙርት አድርጓቸው" ባለው አምላካዊ ቃል መሰረት ወንጌልን አመቺ በሆነ መንገድ
+              ሁሉ ለመላው ዓለም መስበክ፡፡
             </p>
           </div>
           <div>
@@ -34,90 +51,37 @@ function DailyPosts() {
         </div>
       </section>
       <section className={classes.daily_wrapper}>
-        <div className={classes.inner_daily_wrapper}></div>
         <div className={classes.main_heading}>
           <h1>ወቅታዊ ክንውኖች እና ልዩ ልዩ ይዘቶች</h1>
         </div>
         <div className={classes.desc_highlight}>
-          <div>
-            <h2>‹‹በጥቂቱ ታምነሃልና በብዙ እሾምሃለው›› (ማቴ.፳፭፥፳፩)</h2>
-            <p>
-              በሰዎች ዘንድ መታመን መታደል ነው፤ እምነትን ጠብቆ መገኘት ደግሞ ታላቅነት ነው፡፡ መታመን የተሰጠን
-              አደራ ጠብቆ መገኘት ለክብር ያበቃል፤ በሰውም ሆነ በአምላካችን በእግዚአብሔር ዘንድ መወደድንና መከበርን
-              ያተርፋል፡፡ ለሰዎች ስንታመን እነርሱ ባያዩንም በሁሉ ቦታ ያለ፣ በቦታ የማይወሰን፣ በእርሱ ዘንድ ጨለማ
-              የሌለበት እግዚአብሔር ያየናል፡፡ መታመናችን “ሰው አየን አላየን” ብለን ሳይሆን ለታመንንለት ነገር
-              በፈቃዳችን መገዛት ስንችል፣ የታመነንን ስናከብር በምትኩ ለታላቅ ኃላፊነት እግዚአብሔር ይሾመናል
-              (ይመርጠናል)፡፡
-            </p>
-            <Link to="/">
-              Read More <MdOutlineKeyboardArrowRight />
-            </Link>
-          </div>
-          <div>
-            <h2>ንጽሐ ጠባይዕ</h2>
-            <p>
-              ከአበው አንዱ “እግዚአብሔርን የማስደስተው ምን ባደርግ ነው? በጾም ነው? ወይስ በድካም ነው? ወይስ
-              በምሕረት? ወይስ በትጋህ?” ብሎ ለጠየቀው ወንድም “አዎ፤ በእነዚህ ግብራት እግዚአብሔርን ደስ ልታሰኘው
-              ትችላለህ። ነፍሳቸውንና ሥጋቸውን ያለ ዕረፍት ያደከሙ ብዙዎች እንደ ሆኑና ድካማቸው ግን ከንቱ እንደ ሆነ
-              በእውነት እነግርሃለሁ። አፋችን መዓዛው እስኪለወጥ ድረስ አብዝተን ጾምን፣ የመጻሕፍትን ቃልም አጠናን፣
-              እግዚአብሔር የሚወደውን ፍቅርንና ትሕትናን ግን ገንዘብ አላደረግንም” በማለት ነበር የመለሰለት። ስለዚህ
-              ለሁሉም መንፈሳዊ ተጋድሎዎችም ትጥቆችም መሠረትም ፍጻሜም ናት። ፍቅርንና ትሕትናን ገንዘብ በማድረግ ንጽሕ
-              ጠባይዕን ገንዘብ ማድረግ የክርስትና ሕይወት መሠረት ነው። (ከበረሃውያን ሕይወትና አንደበት በመምህር
-              ያረጋል አበጋዝ)
-            </p>
-            <Link to="/">
-              Read More <MdOutlineKeyboardArrowRight />
-            </Link>
-          </div>
-          <div className={classes.DZ_img_wrapper}>
-            <div>
-              <img src={DZ} alt="DZ_img" />
-            </div>
-            <div className={classes.DZ_wrapper}>
-              <h2>«በደብረ ዘይት ተቀምጦ አስተማረ» (ማር.፲፫፥፫)</h2>
-              <p>
-                በመዋዕለ ስብከቱ ጌታችን መድኃኒታችን ኢየሱስ ክርስቶስ በደብረ ዘይት ተራራ ላይ ሆኖ ደቀ መዛሙርቱ
-                የቤተ መቅደሱን ሥነ ሕንፃ በትኩረት እያንዳንዱን ነገር በመመልከት ሲያደንቁ እርሱ ግን ቤተ መቅደሱ
-                እንደሚፈርስ፣ ከሞት በኋላ ተነሥቶ እንደሚያርግና ነገር ግን ዓለምን ለማሳለፍ ዳግም እንደሚመጣ
-                ነገራቸው።
-              </p>
-              <Link to="/">
-                Read More <MdOutlineKeyboardArrowRight />
-              </Link>
-            </div>
-          </div>
-          <div>
-            <h2>‹‹በባልንጀራህ ላይ በሐሰት አትመስክር›› (ዘፀ.፳፥፲፮)</h2>
-            <p>
-              ውድ የእግዚአብሔር ልጆች! እንዴት አላችሁልን! በፈቃደ እግዚአብሔር የጀመርነው ዐቢይ ጾም (ጾመ
-              ክርስቶስ) አምስተኛው ሳምንት ላይ እንገኛለን፤ በአቅማችሁ በመጾም በጸሎት እየበረታችሁ እንደሆነ ተስፋችን
-              ነው፤ በሰንበት ወደ ቅድስት ቤተ ክርስቲያን በመሄድ ማስቀደስና መንፈሳዊ ትምህርትን ከመማርም መዘንጋት
-              የለብንም!
-            </p>
-            <p>
-              በእግዚአብሔር ቤት ስናድግ እንባረካለን፤ አምላካችንም ጥበቡንና ማስተዋሉን ያድለናል፤ በጥሩ ሥነ ምግባር
-              አድገን፣ ለራሳችን ለቤተሰቦቻችን እንዲሁም ለአገራችን መልካም የምንሠራም እንሆናለን፡፡ በዘመናዊ
-              ትምህርታችሁም በርትታችሁ መማር ይገባል፡፡ የሁለተኛ መንፈቀ ዓመት እየተገባደደ ነውና በርትታችሁ ትማሩ
-              ዘንድ አጥኑ፤ ያልገባችሁን ጠይቁ፤ አብዛኛውን ጊዜያችሁን በትምህርታችሁ አተኩሩ፡፡ መልካም! በዛሬው
-              ትምህርታችን ሐሰት (ውሸት) በሚል ርእስ እንማራለን፡፡
-            </p>
-            <Link to="/">
-              Read More <MdOutlineKeyboardArrowRight />
-            </Link>
-          </div>
-          <div>
-            <h2>ወርኃ መጋቢት</h2>
-            <p>
-              በኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ቤተ ክርስቲያን አስተምህሮ ሰባተኛው ወር ወርኀ መጋቢት ይባላል። መጋቢት
-              በቁሙ “ስመ ወርኅ፣ ሳብዕት እመስከረም፣ የመዓልትና የሌሊት ምግብና ትክክል የሚሆንበት ወርኅ ዕሪና”
-              ማለት ነው። “እስመ ይዔሪ መዓልተ ወሌሊተ አመ እስራ ወኀሙሱ ለወርኀ መጋቢት፤ በመጋቢት ወር ፳፭ ቀን
-              ሌሊቱና መዓልቱ ይስተካከላልና” እንዲል፡፡ (ዲድስቅልያ ፴፣ ኪዳነ ወልድ ክፍሌ ገጽ ፭፻፸፯)
-            </p>
-            <Link to="">
-              Read More <MdOutlineKeyboardArrowRight />
-            </Link>
-          </div>
+          {latestPosts.length > 0 ? (
+            latestPosts
+              .sort((a, b) => b.id - a.id)
+              .map((post) => (
+                <div key={post.id} className={classes.post}>
+                  <h2>{post.title}</h2>
+                  <p className={classes.truncated}>
+                    {/* Render the description as HTML */}
+                    <div
+                      dangerouslySetInnerHTML={{ __html: post.description }}
+                      className={classes.post_content}
+                    ></div>
+                  </p>
+                  <Link
+                    to={`/posts/read-more/${post.id}`}
+                    className={classes.readMoreLink}
+                  >
+                    Read More <MdOutlineKeyboardArrowRight />
+                  </Link>
+                </div>
+              ))
+          ) : (
+            <p>No posts available</p>
+          )}
         </div>
+        <h1 style={{ textAlign: "center", padding: "2rem" }}>Latest Videos:</h1>
+        <Youtube />
       </section>
     </>
   );

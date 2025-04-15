@@ -14,6 +14,7 @@ import Theater from './Pages/Services/theater/theater'
 import HQ from './Pages/Services/HQ/HQ'
 import Four04 from './Pages/Four04/Four04';
 import Contact from './Pages/Contacts/Contact';
+import ReadMore from './Pages/DailyPosts/ReadMore';
 
 const Routing = () => {
   return (
@@ -32,6 +33,7 @@ const Routing = () => {
         <Route path="/services/theater" element={<Theater />} />
         <Route path="/services/HQ" element={<HQ />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/posts/read-more/:id" element={<ReadMore />} />
         <Route path="*" element={<Four04 />} />
         </Routes>
     </Router>

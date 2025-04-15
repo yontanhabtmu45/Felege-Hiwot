@@ -18,22 +18,22 @@ function Footer() {
             </Link>
             <ul>
               <li>
-                <Link to="">
+                <Link to="" target="_blank">
                   <FaTelegram />
                 </Link>
               </li>
               <li>
-                <Link to="">
+                <Link to="https://www.instagram.com/felege.hiwot" target="_blank">
                   <FaInstagram />
                 </Link>
               </li>
               <li>
-                <Link to="">
+                <Link to="https://www.youtube.com/@Felegehiyiwots.s" target="_blank">
                   <FaYoutube />
                 </Link>
               </li>
               <li>
-                <Link to="">
+                <Link to="https://www.tiktok.com/@felege.hiwot?_t=ZM-8t7dReKmUR4&_r=1" target="_blank">
                   <FaTiktok />
                 </Link>
               </li>
